@@ -1,0 +1,9 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+      #static-path-pattern: /static/**
+    #resources:
+    #静态资源扫描
+      #static-location: classpath:/WEB-INF/static/

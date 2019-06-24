@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/css.css" rel="stylesheet" type="text/css" />
+	<link href="css/blue.css" id="style_css"  rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tips.js"></script>
+
+	<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+	
+<script type="text/javascript">
+$(document).ready(function(){ 
+	var percent = $('.progress_bar').attr('title');
+	$(".progress_bar").animate({width:percent},1000);
+	$(".tip").tipsy({gravity:'s',fade:true});
+});
+</script>
+
+
+<style type="text/css">
+
+.progress-b{width:245px;margin:40px auto;}
+.progress-b span{margin-right:20px;}
+.progress_container{margin-top:10px;padding:1px;width:220px;height:9px;border-radius:5px;overflow:hidden;background:#ddd;}
+.progress_bar{height:9px;width:0px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#4884b5;}
+/* tipsy */
+.tipsy{padding:5px;font-size:11px;position:absolute;z-index:100000;}
+.tipsy-inner{padding:6px 8px 6px 8px;background-color:black;color:white;max-width:200px;text-align:center;}
+.tipsy-inner{border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.tipsy-arrow{position:absolute;background:url('images/tipsy.gif') no-repeat top left;width:9px;height:5px;}
+.tipsy-n .tipsy-arrow{top:0;left:50%;margin-left:-4px;}
+.tipsy-nw .tipsy-arrow{top:0;left:10px;}
+.tipsy-ne .tipsy-arrow{top:0;right:10px;}
+.tipsy-s .tipsy-arrow{bottom:0;left:50%;margin-left:-4px;background-position:bottom left;}
+.tipsy-sw .tipsy-arrow{bottom:0;left:10px;background-position:bottom left;}
+.tipsy-se .tipsy-arrow{bottom:0;right:10px;background-position:bottom left;}
+.tipsy-e .tipsy-arrow{top:50%;margin-top:-4px;right:0;width:5px;height:9px;background-position:top right;}
+.tipsy-w .tipsy-arrow{top:50%;margin-top:-4px;left:0;width:5px;height:9px;}	
+</style>
+</head>
+<body>
+	<div class="progress-b">
+		<span>文件名：1231233</span><span>文件大小：18.90kb</span>
+		<div class="progress_container"><div class="progress_bar tip" title="10%"></div></div>
+	</div>
+</body>
+</html>
